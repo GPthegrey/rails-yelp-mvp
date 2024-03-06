@@ -1,0 +1,19 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Restaurants</h1>
+
+<div class="container" id="restaurants">
+  <div class="row">
+    <div class="col-md-9">
+      <% @restaurants.each do |restaurant| %>
+        <%= render restaurant %>
+        <p>
+          <%= link_to "Show this restaurant", restaurant, class: 'btn btn-success' %>
+        </p>
+      <% end %>
+    </div>
+    <div class="col-md-3">
+      <%= link_to "New restaurant", new_restaurant_path, class: "btn btn-primary btn-block" %>
+    </div>
+  </div>
+</div>
